@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delivery App</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- Login Page -->
+  <div id="loginPage" class="page active">
+    <h1><b>Login Page</h1></b>
+    <form id="loginForm">
+      <label>USERNAME:</label>
+      <input type="email" id="email" placeholder="Email" required><BR>
+      <LABEL>PASSWORD:</LABEL>
+      <input type="password" id="password" placeholder="Password" required><BR>
+        <button type="submit">Login</button>
+    </form>
+    <p>Don't have an account? <a href="#" onclick="showSignup()">Sign up</a></p>
+  </div>
+
+  <!-- Signup Page -->
+  <div id="signupPage" class="page">
+    <h1><b>Sign-up Page</h1></b>
+    <form id="signupForm">
+      <label>USERNAME:</label>
+      <input type="email" id="signupEmail" placeholder="Email" required><BR>
+      <LABEL>PASSWORD:</LABEL>
+
+      <input type="password" id="signupPassword" placeholder="Password" required><br>
+      <button type="submit">Sign Up</button>
+    </form>
+    <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+  </div>
+
+  <!-- Dashboard Page -->
+  <div id="dashboardPage" class="page">
+    <h1>Dashboard</h1>
+    <div id="requestsList"></div>
+    <button onclick="showAddRequest()">Add Delivery Request</button><br><br><br><br>
+    <button onclick="showProfile()">Profile</button>
+  </div>
+
+  <!-- Request Details Page -->
+  <div id="requestDetailsPage" class="page">
+    <h1>Request Details</h1>
+    <div id="requestDetails"></div>
+    <button onclick="showDashboard()">Back to Dashboard</button>
+  </div>
+
+  <!-- Add Request Page -->
+  <div id="addRequestPage" class="page">
+    <h1>Add a New Delivery Request</h1>
+    <form id="addRequestForm">
+      <input type="text" id="item" placeholder="Item Name" required>
+      <input type="text" id="location" placeholder="Delivery Location" required>
+      <input type="number" id="points" placeholder="Reward Points" required><br>
+      <button type="submit">Submit</button><br><br><br><br><br>
+    </form>
+    <button onclick="showDashboard()">Back to Dashboard</button>
+  </div>
+
+  <!-- User Profile Page -->
+  <div id="profilePage" class="page">
+    <h1>User Profile</h1>
+    <div id="profileInfo"></div> <br>
+    <button onclick="showDashboard()">Back to Dashboard</button>
+  </div>
+
+</body>
+</html> 
